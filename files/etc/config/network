@@ -1,0 +1,17 @@
+
+config interface		'loopback'
+	option	device		'lo'
+	option	proto		'static'
+	option	ipaddr		'127.0.0.1/8'
+
+config device
+	option	name 		'eth0'
+
+config interface 		'wan'
+	option	device		'eth0'
+	option	proto		'none'
+	option	force_link	'1'
+	option	ipv6		'auto'
+	option	ip6assign	'64'
+	option	dns		'2001:4860:4860::8888 2001:4860:4860::8844'
+
